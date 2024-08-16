@@ -1,5 +1,5 @@
-import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.projectFeatures.buildReportTab
+import jetbrains.buildServer.configs.kotlin.project
+import jetbrains.buildServer.configs.kotlin.version
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -25,22 +25,4 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 
 version = "2024.03"
 
-project {
-    description = "Contains all other projects"
-
-    features {
-        buildReportTab {
-            id = "PROJECT_EXT_1"
-            title = "Code Coverage"
-            startPage = "coverage.zip!index.html"
-        }
-    }
-
-    cleanup {
-        baseRule {
-            all(days = 365)
-            history(days = 90)
-            preventDependencyCleanup = false
-        }
-    }
-}
+project(_self.Anton)
