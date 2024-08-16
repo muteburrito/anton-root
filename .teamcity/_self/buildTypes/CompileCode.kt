@@ -7,7 +7,6 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 object CompileCode : BuildType({
     name = "Code Compilation"
-    id("CodeCompilation")
 
     // Define the VCS root for the project
     vcs {
