@@ -2,6 +2,7 @@ package _self.buildTypes
 
 import _self.vcsRoots.*
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
@@ -24,6 +25,14 @@ object CompileCode : BuildType({
                 git checkout main
                 git pull origin main
             """.trimIndent()
+        }
+
+        // Step 2: Install PyInstaller
+        python {
+            name = "Install PyInstaller"
+            command = script {
+                content = "pip install pyinstaller"
+            }
         }
     }
 
