@@ -47,4 +47,6 @@ object CompileCode : BuildType({
             branchFilter = "+:<default>"
         }
     }
+
+    artifactRules = "dist/app => output.zip"
 })
