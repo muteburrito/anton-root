@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <tools>
+    <default-versions>
+      <tool-version tool-type="JetBrains.dotCover.CommandLineTools" id="JetBrains.dotCover.CommandLineTools.bundled" />
+    </default-versions>
+  </tools>
+</settings>
+
